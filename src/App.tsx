@@ -66,34 +66,55 @@ const App = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+      <StatusBar backgroundColor={'#67FF6D'} />
+      <View
+        style={{
+          height: 90,
+          backgroundColor: '#67FF6D',
+          justifyContent: 'center',
+        }}>
+        <Text>Blank</Text>
+      </View>
+      <View
+        for="해더 검정색"
+        style={{
+          flexDirection: 'row',
+          alignSelf: 'flex-start',
+          height: 38,
+          width: '100%',
+          backgroundColor: '#67FF6D',
+        }}>
+        <View style={{flex: 1}}>
+          <Text>AAA</Text>
         </View>
-      </ScrollView>
+        <View style={{flex: 5, flexDirection: 'row'}}>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: '#67FF6D',
+              position: 'relative',
+            }}>
+            <View
+              style={{
+                width: 0,
+                height: 0,
+                backgroundColor: 'transparent',
+                borderStyle: 'solid',
+                borderRightWidth: 35,
+                borderTopWidth: 38,
+                borderRightColor: 'red',
+                borderTopColor: '#67FF6D',
+                borderTopRightRadius: 10,
+                borderBottomLeftRadius: 1,
+
+                transform: [{rotate: '0deg'}],
+              }}
+            />
+          </View>
+
+          <View style={{flex: 9, backgroundColor: 'black'}}></View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
